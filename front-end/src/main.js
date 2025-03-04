@@ -17,8 +17,10 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 
+const firebaseApi = process.env.FIREBASE_API_KEY;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDw4NBjik1EGWMoioYP0-foQn4ejQpNYOQ",
+  apiKey: firebaseApi,
 
   authDomain: "vue-site-b0745.firebaseapp.com",
 

@@ -1,8 +1,10 @@
 import express, { application } from "express";
 import { MongoClient } from "mongodb";
 import path from "path";
+const mongoDbConnectionString = process.env.MONGODB_CONNECT;
+
 async function start() {
-  const url = `mongodb+srv://fsv-server:fsv-server@fullstackvue-cluster.h1ied.mongodb.net/?retryWrites=true&w=majority&appName=fullstackvue-cluster`;
+  const url = mongoDbConnectionString;
   const client = new MongoClient(url);
 
   await client.connect();
