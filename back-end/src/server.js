@@ -88,7 +88,7 @@ async function start() {
   });
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "__/dist/insex.html"));
+    res.sendFile(path.join(__dirname, "__/dist/index.html"));
   });
 
   const port = process.env.PORT || 8000;
